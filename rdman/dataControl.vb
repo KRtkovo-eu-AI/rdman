@@ -414,7 +414,7 @@ Module dataControl
                 ProcessProperties.FileName = mstscPath
 
                 If nodeFullscreen = True Then
-                    Dim useWorkAreaFullscreen As Boolean = My.Settings.compactMode AndAlso My.Settings.sidebarAsCompactMode
+                    Dim useWorkAreaFullscreen As Boolean = mainForm.CompactModeToolStripMenuItem.Checked AndAlso mainForm.UseSidebarAsCompactToolStripMenuItem.Checked
 
                     If useWorkAreaFullscreen = True Then
                         Dim availableWorkArea As Rectangle = Screen.PrimaryScreen.WorkingArea
